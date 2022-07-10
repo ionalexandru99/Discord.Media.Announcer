@@ -1,8 +1,9 @@
+using Discord.Media.Announcer.Attributes;
+
 namespace Discord.Media.Announcer.Configuration;
 
-public class DiscordConfiguration
+[ConfigurationSection("DiscordConfiguration")]
+public class DiscordConfiguration : IReadFromConfiguration
 {
-    public const string SectionName = nameof(DiscordConfiguration);
-    
     public string Token { get; set; }
 }
